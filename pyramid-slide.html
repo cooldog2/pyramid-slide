@@ -1,41 +1,71 @@
 <!DOCTYPE html>
+
 <html>
 <head>
+  <!-- <link type="text/css" rel="stylesheet" href="stylesheet.css"/> -->
     <style>
+        body {
+        font-family: "Courier New", monospace;
+        text-align: center;
+        background-color: white;
+        /*border: 1px solid purple;*/
+        }
+
+        h1 {
+          border: 1px solid black;
+          /*background-color: #FFFF00;*/
+          background-color: purple;
+          padding: 50px 30px 50px 80px;
+          color: #acd1b2;
+         }
+
+         .inner {
+          background-color: #b7d1c4;
+          border-radius: 10px;
+          /*margin: 10px 5px 15px 20px;*/
+          margin: 0cm 4cm 3cm 4cm;
+
+        }
         #pyramid {
             line-height: 0;
             font-size: 30px;
+            font-weight:lighter ;
         }
+        #draw{
+            background-color: #A7A7A7;
+          }
 
-        body {
-            font-family: "Courier New", monospace;
-            text-align: center;
-        }
+
     </style>
 </head>
 <body >
-    <h1> Pyramid Slide </h1>
 
-    <br>
+        <h1> Pyramid Slide </h1>
 
-    <p>When you say</p>
-    <p><strong>Draw a pyramid</strong></p>
-    <p>I say:</p>
+        <br>
+        <div class ="inner">
+            <div id = "draw"
+                  <label>Brick Symbol:</label>
 
-    <br>
+                  <select id = "brick" onchange="getSymbol(this.value)">
+                    <option value = "#">#</option>
+                    <option value = "@">@</option>
+                    <option value = "X">X</option>
+                    <option value = "$">$</option>
+                  </select>
 
-    <label>How high?</label>
-    <!-- <input type="text" id="height">   original code replaced-->
+                <label>How high?</label>
+                <!-- <input type="range" id="height" min="1" max="20"> // my original code -->
 
-    <input type="range" id="height" min="0" max="20">
-    <br><br>
+                <input type="range" id="height" min="1" max="20" >
+                <label = id="heightnum"></>
 
-    <button id="button">Draw a pyramid</button>
+              <br><br>
+            </div>
 
-    <br><br>
-
-    <div id="pyramid"></div>
-
+            <div id="pyramid"></div>
+        </div>
     <script src="pyramid-slide.js"></script>
+  </div>
 </body>
 </html>
